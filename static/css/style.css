@@ -1,0 +1,167 @@
+/* Фоновий ефект із легким градієнтом */
+body {
+    background: linear-gradient(135deg, #e9efff, #f6f8ff);
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Навбар - скляний стиль */
+.navbar {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #4f46e5 !important;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: #374151 !important;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #4f46e5 !important;
+}
+
+/* Контейнер */
+.container {
+    flex: 1;
+    max-width: 800px;
+}
+
+/* Заголовок */
+h1 {
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Кнопка створення завдання */
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+}
+
+/* Стиль списку завдань */
+.list-group {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(99, 102, 241, 0.1);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+/* Статус завдання з градієнтом */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.5em 0.9em;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.4);
+}
+
+/* Адаптивність */
+@media (max-width: 576px) {
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .badge {
+        margin-top: 0.6rem;
+    }
+}
+
+
+/* Контейнер для auth-кнопок */
+.auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* Стиль кнопок входу/виходу/реєстрації */
+.auth-buttons a {
+    padding: 0.45rem 1.1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: white;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.auth-buttons a:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-1px);
+}
+
+.task-title-link {
+    font-weight: 600;
+    text-decoration: none;
+    color: #1f2937;
+    transition: 0.2s ease;
+}
+
+.task-title-link:hover {
+    color: #4f46e5;
+}
+
+.delete-btn {
+    background-color: #ef4444;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: white;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+    transform: scale(1.05);
+}

@@ -16,18 +16,20 @@ class TaskForm(forms.ModelForm):
 
 class TaskFilterForm(forms.Form):
     STATUS_CHOICES = [
+        ('', 'All'),
         ("todo", "To Do"),
         ("in_progress", "In Progress"),
         ("done", "Done"),
     ]
 
     PRIORITY_CHOICES = [
+        ('', 'All'),
         ("low", "Low"),
         ("medium", "Medium"),
         ("high", "High"),
     ]
-    status = forms.CharField(choices=STATUS_CHOICES, label='Status', required=False)
-    priority = forms.CharField(choices=PRIORITY_CHOICES, label='Priority', required=False)
+    status = forms.ChoiceField(choices=STATUS_CHOICES, label='Status', required=False)
+    priority = forms.ChoiceField(choices=PRIORITY_CHOICES, label='Priority', required=False)
 
     def __init__(self, *args, **kwargs):
         super(TaskFilterForm, self).__init__(*args, **kwargs)

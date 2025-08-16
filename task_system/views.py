@@ -19,7 +19,7 @@ class TaskListView(LoginRequiredMixin, ListView):
         if status:
             queryset = queryset.filter(status=status)
 
-        if queryset:
+        if priority:
             queryset = queryset.filter(priority=priority)
 
         return queryset
@@ -47,6 +47,6 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
 
 class TaskDeleteView(LoginRequiredMixin, DeleteView):
     model = Task
-    template_name = "templates/task_delete.html"
+    template_name = "task_delete.html"
     success_url = reverse_lazy('task_list')
 
